@@ -11,4 +11,3 @@ function fibSeriesToCertainNumber(n) {
   fibSeries.push(currentNumber)
   return fibSeries
 }
-//console.log(fibSeriesToCertainNumber(610))
