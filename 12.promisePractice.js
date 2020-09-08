@@ -24,14 +24,14 @@ Promise.race([promiseNice, promiseParis])
 //3 task
 
 function resolveCities(cities){
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
     setTimeout(() => {
       resolve(cities)
       console.log(cities)
     },3000)
   })
 }
-resolveCities(['Minsk','Rome']).then(cities => cities.map((city)=> {
+resolveCities(['Minsk','Rome']).then(cities => cities.map(city => {
   fetch(`http://geocode.xyz/${city}?json=1&auth=${API_KEY}`)
     .then(response => response.json())
     .then(data => console.log(`${city}-${data.standard.countryname}`))
