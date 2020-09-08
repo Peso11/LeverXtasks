@@ -5,4 +5,3 @@ function promiseFunc() {
     }, 6000)
   })
 }
-console.log(promiseFunc())
